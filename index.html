@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>:root {
+    <style>
+        :root {
             --primary: #4361ee;
             --primary-dark: #3a0ca3;
             --secondary: #4cc9f0;
@@ -422,8 +423,8 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
-        /* Droplet Background */
-        .droplets {
+        /* Snowfall Effect */
+        .snowfall {
             position: fixed;
             top: 0;
             left: 0;
@@ -434,13 +435,12 @@
             overflow: hidden;
         }
 
-        .droplet {
+        .snowflake {
             position: absolute;
             border-radius: 50%;
-            background: rgba(67, 97, 238, 0.1);
-            backdrop-filter: blur(2px);
-            animation: dropletFloat 15s infinite linear;
-            box-shadow: inset 0 0 10px rgba(67, 97, 238, 0.3);
+            background: rgba(255, 255, 255, 0.7);
+            animation: snowfall 10s linear infinite;
+            opacity: 0.8;
         }
 
         /* About Section */
@@ -1135,13 +1135,13 @@
             100% { transform: translateX(100%); }
         }
 
-        @keyframes dropletFloat {
+        @keyframes snowfall {
             0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.8;
             }
             100% {
-                transform: translateY(-1000px) rotate(720deg);
+                transform: translateY(100vh) translateX(20vw) rotate(360deg);
                 opacity: 0;
             }
         }
@@ -1352,15 +1352,12 @@
                 width: 250px;
                 height: 250px;
             }
-        }</style>
-  
+        }
+    </style>
 </head>
 <body>
-    <!-- Custom cursor elements -->
-    
-    
-    <!-- Droplet Background -->
-    <div class="droplets" id="droplets"></div>
+    <!-- Snowfall Effect -->
+    <div class="snowfall" id="snowfall"></div>
     
     <!-- Background Icons -->
     <div class="bg-icons" id="bgIcons"></div>
@@ -1595,7 +1592,6 @@
                             <span class="tag">Seaborn</span>
                         </div>
                         <div class="project-buttons">
-                    
                             <a href="https://github.com/Its-Vikas-xd/spotify-analytics-Dashboard" target="_blank" class="btn btn-outline btn-small">GitHub</a>
                         </div>
                     </div>
@@ -1621,7 +1617,6 @@
                             <span class="tag">Power BI</span>
                         </div>
                         <div class="project-buttons">
-                            
                             <a href="https://github.com/Its-Vikas-xd/Shopify-Dashboard" target="_blank" class="btn btn-outline btn-small">GitHub</a>
                         </div>
                     </div>
@@ -1646,7 +1641,6 @@
                             <span class="tag">Tkinter</span>
                         </div>
                         <div class="project-buttons">
-                            
                             <a href="https://github.com/Its-Vikas-xd/Sales-Data-Analyzer-Application" target="_blank" class="btn btn-outline btn-small">GitHub</a>
                         </div>
                     </div>
@@ -1831,30 +1825,30 @@
             }
         });
         
-        // Create droplet background
-        function createDroplets() {
-            const dropletsContainer = document.getElementById('droplets');
-            const dropletCount = 20;
+        // Create snowfall effect
+        function createSnowfall() {
+            const snowfallContainer = document.getElementById('snowfall');
+            const snowflakeCount = 150;
             
-            for (let i = 0; i < dropletCount; i++) {
-                const droplet = document.createElement('div');
-                droplet.classList.add('droplet');
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
                 
                 // Random properties
-                const size = Math.random() * 100 + 20;
+                const size = Math.random() * 5 + 2;
                 const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                const duration = Math.random() * 20 + 10;
-                const delay = Math.random() * 5;
+                const delay = Math.random() * 10;
+                const duration = Math.random() * 10 + 5;
+                const opacity = Math.random() * 0.5 + 0.3;
                 
-                droplet.style.width = `${size}px`;
-                droplet.style.height = `${size}px`;
-                droplet.style.left = `${posX}%`;
-                droplet.style.top = `${posY}%`;
-                droplet.style.animationDuration = `${duration}s`;
-                droplet.style.animationDelay = `${delay}s`;
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                snowflake.style.left = `${posX}%`;
+                snowflake.style.opacity = opacity;
+                snowflake.style.animationDuration = `${duration}s`;
+                snowflake.style.animationDelay = `${delay}s`;
                 
-                dropletsContainer.appendChild(droplet);
+                snowfallContainer.appendChild(snowflake);
             }
         }
         
@@ -1888,8 +1882,8 @@
             }
         }
         
-        // Initialize droplets and icons
-        createDroplets();
+        // Initialize snowfall and icons
+        createSnowfall();
         createBackgroundIcons();
         
         // Initialize animations on scroll
@@ -1990,8 +1984,6 @@
         skillBars.forEach(bar => {
             skillBarObserver.observe(bar);
         });
-        
-
     </script>
 </body>
 </html>
