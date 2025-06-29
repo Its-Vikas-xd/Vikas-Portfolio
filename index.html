@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vikas Sharma | Python Developer & Data Analyst</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="icon" href="/Project_Images/logo.png" type="image/png">
-
-
-    <style>
-        :root {
-            --primary: #e63946; /* Vibrant red */
-            --primary-dark: #d90429; /* Darker red */
-            --secondary: #fca311; /* Golden yellow for accents */
-            --accent: #f94144; /* Slightly different red */
-            --dark: #121212; /* Almost black */
-            --darker: #0a0a0a; /* Pure black */
-            --light: #f8fafc;
-            --gray: #8d99ae; /* Soft gray */
+    <style>:root {
+            --primary: #4361ee;
+            --primary-dark: #3a0ca3;
+            --secondary: #4cc9f0;
+            --accent: #7209b7;
+            --dark: #10002b;
+            --darker: #0a0020;
+            --light: #f8f9fa;
+            --gray: #adb5bd;
             --success: #06d6a0;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.25);
-            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.35);
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.15);
+            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.25);
             --border-radius: 12px;
             --gradient: linear-gradient(135deg, var(--primary), var(--primary-dark));
             --gradient-reverse: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            --gradient-accent: linear-gradient(135deg, var(--accent), #f3722c);
-            --glass-bg: rgba(25, 25, 25, 0.6);
-            --glass-border: rgba(230, 57, 70, 0.3);
+            --gradient-accent: linear-gradient(135deg, var(--accent), var(--secondary));
+            --glass-bg: rgba(25, 25, 25, 0.3);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
 
         * {
@@ -48,7 +42,7 @@
             line-height: 1.7;
             overflow-x: hidden;
             position: relative;
-            transition: background 0.5s ease;
+            min-height: 100vh;
         }
 
         body::before {
@@ -58,9 +52,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 10% 20%, rgba(230, 57, 70, 0.08) 0%, rgba(10, 10, 10, 0) 30%);
+            background: radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.15) 0%, rgba(10, 0, 32, 0) 30%);
             z-index: -1;
-            transition: background 0.5s ease;
+            animation: gradientMove 15s infinite alternate;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 10% 20%; }
+            100% { background-position: 90% 80%; }
         }
 
         h1, h2, h3, h4, h5 {
@@ -68,7 +67,6 @@
             font-weight: 700;
             line-height: 1.3;
         }
- 
 
         .container {
             width: 90%;
@@ -179,7 +177,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(18, 18, 18, 0.95);
+            background: rgba(16, 0, 43, 0.95);
             backdrop-filter: blur(10px);
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
@@ -254,7 +252,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         .menu-toggle {
@@ -314,7 +312,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(230, 57, 70, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+            background: radial-gradient(circle, rgba(67, 97, 238, 0.2) 0%, rgba(10, 0, 32, 0) 70%);
             animation: rotate 20s linear infinite;
         }
 
@@ -341,7 +339,11 @@
         .hero-title span {
             position: relative;
             z-index: 1;
-            color: var(--primary);
+            color: var(--secondary);
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .hero-title span::after {
@@ -351,7 +353,7 @@
             left: 0;
             width: 100%;
             height: 20px;
-            background: rgba(230, 57, 70, 0.2);
+            background: rgba(67, 97, 238, 0.2);
             z-index: -1;
             border-radius: 5px;
         }
@@ -389,7 +391,7 @@
             width: 380px;
             height: 380px;
             border-radius: 50%;
-            border: 10px solid rgba(18, 18, 18, 0.7);
+            border: 10px solid rgba(16, 0, 43, 0.7);
             box-shadow: var(--shadow-lg);
             background: var(--gradient);
             display: flex;
@@ -413,30 +415,32 @@
             height: 90%;
             object-fit: cover;
             border-radius: 50%;
-            border: 4px solid rgba(18, 18, 18, 0.7);
+            border: 4px solid rgba(16, 0, 43, 0.7);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
-        /* Particles */
-        .particles {
-            position: absolute;
+        /* Droplet Background */
+        .droplets {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
             z-index: -1;
+            overflow: hidden;
         }
 
-        .particle {
+        .droplet {
             position: absolute;
             border-radius: 50%;
-            background: var(--primary);
-            opacity: 0.3;
-            animation: float 15s infinite linear;
+            background: rgba(67, 97, 238, 0.1);
+            backdrop-filter: blur(2px);
+            animation: dropletFloat 15s infinite linear;
+            box-shadow: inset 0 0 10px rgba(67, 97, 238, 0.3);
         }
 
         /* About Section */
@@ -477,7 +481,7 @@
         }
 
         .about-highlight {
-            background: rgba(230, 57, 70, 0.1);
+            background: rgba(67, 97, 238, 0.1);
             padding: 25px;
             border-left: 4px solid var(--primary);
             margin: 30px 0;
@@ -506,7 +510,7 @@
         }
 
         .skill-card {
-            background: rgba(25, 25, 25, 0.7);
+            background: rgba(25, 25, 25, 0.2);
             border-radius: var(--border-radius);
             padding: 25px 20px;
             text-align: center;
@@ -514,7 +518,7 @@
             transition: var(--transition);
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(230, 57, 70, 0.2);
+            border: 1px solid rgba(67, 97, 238, 0.2);
         }
 
         .skill-card::before {
@@ -575,7 +579,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(230, 57, 70, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+            background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, rgba(10, 0, 32, 0) 70%);
             animation: rotate 20s linear infinite;
             z-index: 0;
         }
@@ -593,12 +597,12 @@
         }
 
         .skill-category {
-            background: rgba(25, 25, 25, 0.7);
+            background: rgba(25, 25, 25, 0.2);
             border-radius: var(--border-radius);
             padding: 30px;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            border: 1px solid rgba(230, 57, 70, 0.2);
+            border: 1px solid rgba(67, 97, 238, 0.2);
         }
 
         .skill-category:hover {
@@ -653,13 +657,13 @@
         }
 
         .project-card {
-            background: rgba(25, 25, 25, 0.7);
+            background: rgba(25, 25, 25, 0.2);
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             position: relative;
-            border: 1px solid rgba(230, 57, 70, 0.2);
+            border: 1px solid rgba(67, 97, 238, 0.2);
         }
 
         .project-card::before {
@@ -756,7 +760,7 @@
         }
 
         .tag {
-            background: rgba(230, 57, 70, 0.2);
+            background: rgba(67, 97, 238, 0.2);
             color: var(--primary);
             padding: 6px 15px;
             border-radius: 30px;
@@ -766,7 +770,18 @@
         }
 
         .project-card:hover .tag {
-            background: rgba(230, 57, 70, 0.3);
+            background: rgba(67, 97, 238, 0.3);
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
@@ -783,7 +798,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(230, 57, 70, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+            background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, rgba(10, 0, 32, 0) 70%);
             animation: rotate 20s linear infinite reverse;
             z-index: 0;
         }
@@ -800,12 +815,12 @@
         }
 
         .contact-card {
-            background: rgba(25, 25, 25, 0.7);
+            background: rgba(25, 25, 25, 0.2);
             padding: 40px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-sm);
             margin-bottom: 30px;
-            border: 1px solid rgba(230, 57, 70, 0.2);
+            border: 1px solid rgba(67, 97, 238, 0.2);
             transition: var(--transition);
         }
 
@@ -827,17 +842,17 @@
             padding: 15px;
             border-radius: var(--border-radius);
             transition: var(--transition);
-            background: rgba(230, 57, 70, 0.1);
+            background: rgba(67, 97, 238, 0.1);
         }
 
         .contact-detail:hover {
-            background: rgba(230, 57, 70, 0.2);
+            background: rgba(67, 97, 238, 0.2);
         }
 
         .contact-icon {
             width: 60px;
             height: 60px;
-            background: rgba(230, 57, 70, 0.2);
+            background: rgba(67, 97, 238, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -867,11 +882,11 @@
 
         .contact-form {
             flex: 1;
-            background: rgba(25, 25, 25, 0.7);
+            background: rgba(25, 25, 25, 0.2);
             padding: 40px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(230, 57, 70, 0.2);
+            border: 1px solid rgba(67, 97, 238, 0.2);
         }
 
         .form-group {
@@ -894,14 +909,14 @@
             border-radius: var(--border-radius);
             font-size: 1.1rem;
             transition: var(--transition);
-            background: rgba(40, 40, 40, 0.7);
+            background: rgba(40, 40, 40, 0.2);
             color: var(--light);
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
         }
 
         textarea.form-control {
@@ -926,7 +941,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(230, 57, 70, 0.2) 0%, rgba(10, 10, 10, 1) 60%);
+            background: radial-gradient(circle at top left, rgba(67, 97, 238, 0.2) 0%, rgba(10, 0, 32, 1) 60%);
             z-index: 0;
         }
 
@@ -1120,6 +1135,17 @@
             100% { transform: translateX(100%); }
         }
 
+        @keyframes dropletFloat {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
         /* Typewriter effect */
         .typewriter {
             overflow: hidden;
@@ -1140,6 +1166,75 @@
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: var(--primary); }
+        }
+
+        .blinking-cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Interactive cursor effect */
+        .cursor {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            mix-blend-mode: difference;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: transform 0.1s, background 0.3s;
+        }
+        
+        .cursor-follower {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9998;
+            transition: all 0.3s ease;
+            transition-property: width, height, border;
+        }
+        
+        .cursor-active {
+            transform: scale(3);
+            background: var(--secondary);
+        }
+        
+        .cursor-follower-active {
+            transform: scale(0.5);
+            border-width: 1px;
+            border-color: var(--secondary);
+        }
+
+        /* Background icons */
+        .bg-icons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .bg-icon {
+            position: absolute;
+            opacity: 0.05;
+            font-size: 3rem;
+            color: var(--primary);
+            animation: float 10s infinite linear;
+            z-index: -1;
         }
 
         /* Responsive Design */
@@ -1257,43 +1352,19 @@
                 width: 250px;
                 height: 250px;
             }
-        }
-        
-        /* Interactive cursor effect */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--primary);
-            mix-blend-mode: difference;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            transition: transform 0.1s;
-        }
-        
-        .cursor-follower {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border: 1px solid var(--primary);
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            z-index: 9998;
-            transition: all 0.3s ease;
-            transition-property: width, height, border;
-        }
-    </style>
+        }</style>
+  
 </head>
 <body>
     <!-- Custom cursor elements -->
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
     
-    <!-- Animated Background Particles -->
-    <div class="particles" id="particles"></div>
+    <!-- Droplet Background -->
+    <div class="droplets" id="droplets"></div>
+    
+    <!-- Background Icons -->
+    <div class="bg-icons" id="bgIcons"></div>
 
     <!-- Scroll to top button -->
     <div class="scroll-top" id="scrollTop">
@@ -1303,7 +1374,7 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Vikas<span>Dev</span></a>
+            <a href="#" class="logo">Vikas</a>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -1314,7 +1385,6 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-           
         </div>
     </header>
 
@@ -1323,18 +1393,18 @@
         <div class="hero-bg"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Hi, I'm <span>Vikas Sharma</span></h1>
+                <h1 class="hero-title">Hi, I'm <span id="typewriter"></span></h1>
                 <h2 class="hero-subtitle">Python Developer & Data Analyst</h2>
                 <p class="hero-description">I transform complex data into actionable insights and build robust web applications. Based in the beautiful mountains of Himachal Pradesh, I combine technical expertise with creative problem-solving.</p>
                 <div class="hero-btns">
-                    <a href="Resume.pdf" class="btn">Download Resume</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <a href="Resume.pdf" class="btn"><i class="fas fa-download"></i> Download Resume</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
                 </div>
             </div>
-           <div class="hero-image">
+            <div class="hero-image">
                 <div class="hero-img">
                     <div class="hero-img-bg"></div>
-                    < <img src="vikas.png" alt="Vikas" class="hero-img-content">
+                    <img src="vikas.png" alt="Vikas" class="hero-img-content">
                     <div class="profile-placeholder" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
                         <i class="fas fa-user-circle"></i>
                     </div>
@@ -1352,8 +1422,12 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3 class="about-title">Python Developer from Himachal Pradesh</h3>
-                    <p class="about-description">I'm a passionate Python developer with expertise in data analysis, visualization, and web development. With a strong foundation in Python and its powerful libraries, I create solutions that turn complex data into meaningful insights.</p>
-                    <p class="about-description">My journey in programming started during my college years and has evolved into a deep expertise in Python development. I enjoy solving complex problems and building applications that make a difference.</p>
+                    <p class="about-description">
+                        I'm a passionate Python developer with expertise in data analysis, visualization, and web development. With a strong foundation in Python and its powerful libraries, I create solutions that turn complex data into meaningful insights.
+                    </p>
+                    <p class="about-description">
+                        My journey in programming started during my college years and has evolved into a deep expertise in Python development. I enjoy solving complex problems and building applications that make a difference.
+                    </p>
                     
                     <div class="about-highlight">
                         <p>I specialize in creating data-driven applications using Python, Flask, and Streamlit, and transforming raw data into compelling visual stories with Power BI and Matplotlib.</p>
@@ -1510,7 +1584,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Spotify Analytics Dashboard</h3>
                         <p class="project-description">
-                            A interactive Power BI dashboard analyzing Spotify listening behavior. Data was extracted using Python and MySQL, cleaned with Pandas and NumPy, and visualized using Power BI with Matplotlib and Seaborn for EDA.
+                            An interactive Power BI dashboard analyzing Spotify listening behavior. Data was extracted using Python and MySQL, cleaned with Pandas and NumPy, and visualized using Power BI with Matplotlib and Seaborn for EDA.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -1521,7 +1595,10 @@
                             <span class="tag">Matplotlib</span>
                             <span class="tag">Seaborn</span>
                         </div>
-                        <a href="https://github.com/Its-Vikas-xd/spotify-analytics-Dashboard" target="_blank" class="tag" style="margin-top: 20px; display: inline-block;"> View on GitHub</a>
+                        <div class="project-buttons">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="https://github.com/Its-Vikas-xd/spotify-analytics-Dashboard" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -1535,7 +1612,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Sales Data Analysis Dashboard</h3>
                         <p class="project-description">
-                            An interactive dashboard for analyzing and visualizing Shopify sales data. Built using Python, Power BI, and MySQL to track KPIs like total sales, order volume, and product performance. Customer funnel insights are visualized using dynamic filtering.
+                            An interactive dashboard for analyzing and visualizing Shopify sales data. Built using Python, Power BI, and MySQL to track KPIs like total sales, order volume, and product performance.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -1544,7 +1621,10 @@
                             <span class="tag">MySQL</span>
                             <span class="tag">Power BI</span>
                         </div>
-                        <a href="https://github.com/Its-Vikas-xd/Shopify-Dashboard" target="_blank" class="tag" style="margin-top: 20px; display: inline-block;"> View on GitHub</a>
+                        <div class="project-buttons">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="https://github.com/Its-Vikas-xd/Shopify-Dashboard" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -1557,7 +1637,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Sales Data Analyzer Application</h3>
-                        <p class="project-description">A desktop GUI application to analyze and visualize sales data from Excel files with professional-quality interactive visualizations. Built with Python and Tkinter, it offers powerful insights into monthly trends, top products, and distribution patterns.</p>
+                        <p class="project-description">A desktop GUI application to analyze and visualize sales data from Excel files with professional-quality interactive visualizations. Built with Python and Tkinter.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">NumPy</span>
@@ -1565,9 +1645,11 @@
                             <span class="tag">Matplotlib</span>
                             <span class="tag">Seaborn</span>
                             <span class="tag">Tkinter</span>
-                            
                         </div>
-                                <a href="https://github.com/Its-Vikas-xd/Sales-Data-Analyzer-Application" target="_blank" class="tag"> View on GitHub</a>
+                        <div class="project-buttons">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="https://github.com/Its-Vikas-xd/Sales-Data-Analyzer-Application" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+                        </div>
                     </div>
                 </div>
               
@@ -1716,11 +1798,11 @@
             
             if (scrollPosition > 100) {
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-                header.style.background = 'rgba(18, 18, 18, 0.98)';
+                header.style.background = 'rgba(16, 0, 43, 0.98)';
                 header.style.backdropFilter = 'blur(10px)';
             } else {
                 header.style.boxShadow = 'none';
-                header.style.background = 'rgba(18, 18, 18, 0.95)';
+                header.style.background = 'rgba(16, 0, 43, 0.95)';
                 header.style.backdropFilter = 'blur(0)';
             }
             
@@ -1750,37 +1832,66 @@
             }
         });
         
-        // Create animated particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 30;
+        // Create droplet background
+        function createDroplets() {
+            const dropletsContainer = document.getElementById('droplets');
+            const dropletCount = 20;
             
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
+            for (let i = 0; i < dropletCount; i++) {
+                const droplet = document.createElement('div');
+                droplet.classList.add('droplet');
                 
                 // Random properties
-                const size = Math.random() * 10 + 5;
+                const size = Math.random() * 100 + 20;
                 const posX = Math.random() * 100;
                 const posY = Math.random() * 100;
                 const duration = Math.random() * 20 + 10;
                 const delay = Math.random() * 5;
-                const color = `hsl(${Math.random() * 360}, 70%, 60%)`;
                 
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.background = color;
-                particle.style.left = `${posX}%`;
-                particle.style.top = `${posY}%`;
-                particle.style.animationDuration = `${duration}s`;
-                particle.style.animationDelay = `${delay}s`;
+                droplet.style.width = `${size}px`;
+                droplet.style.height = `${size}px`;
+                droplet.style.left = `${posX}%`;
+                droplet.style.top = `${posY}%`;
+                droplet.style.animationDuration = `${duration}s`;
+                droplet.style.animationDelay = `${delay}s`;
                 
-                particlesContainer.appendChild(particle);
+                dropletsContainer.appendChild(droplet);
             }
         }
         
-        // Initialize particles
-        createParticles();
+        // Create background icons
+        function createBackgroundIcons() {
+            const iconsContainer = document.getElementById('bgIcons');
+            const icons = ['fab fa-python', 'fas fa-database', 'fas fa-chart-bar', 'fas fa-code', 
+                           'fas fa-calculator', 'fas fa-cloud', 'fas fa-server', 'fas fa-laptop-code'];
+            const iconCount = 15;
+            
+            for (let i = 0; i < iconCount; i++) {
+                const icon = document.createElement('i');
+                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+                
+                icon.className = `bg-icon ${randomIcon}`;
+                
+                // Random properties
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const duration = Math.random() * 30 + 20;
+                const delay = Math.random() * 10;
+                
+                icon.style.fontSize = `${size}rem`;
+                icon.style.left = `${posX}%`;
+                icon.style.top = `${posY}%`;
+                icon.style.animationDuration = `${duration}s`;
+                icon.style.animationDelay = `${delay}s`;
+                
+                iconsContainer.appendChild(icon);
+            }
+        }
+        
+        // Initialize droplets and icons
+        createDroplets();
+        createBackgroundIcons();
         
         // Initialize animations on scroll
         const observer = new IntersectionObserver((entries) => {
@@ -1841,17 +1952,23 @@
         }
         
         // Typewriter effect for hero title
-        const heroTitle = document.querySelector('.hero-title span');
-        heroTitle.textContent = '';
+        const typewriterElement = document.getElementById('typewriter');
+        typewriterElement.textContent = '';
         
         const name = 'Vikas Sharma';
         let i = 0;
         
         function typeWriter() {
             if (i < name.length) {
-                heroTitle.textContent += name.charAt(i);
+                typewriterElement.textContent += name.charAt(i);
                 i++;
                 setTimeout(typeWriter, 100);
+            } else {
+                // Add a blinking cursor after finishing
+                const cursor = document.createElement('span');
+                cursor.className = 'blinking-cursor';
+                cursor.textContent = '|';
+                typewriterElement.appendChild(cursor);
             }
         }
         
@@ -1881,34 +1998,31 @@
         
         document.addEventListener('mousemove', (e) => {
             cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-            
-            setTimeout(() => {
-                cursorFollower.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-            }, 100);
+            cursorFollower.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
         });
         
         document.addEventListener('mousedown', () => {
-            cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) scale(0.7)`;
-            cursorFollower.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) scale(1.3)`;
+            cursor.classList.add('cursor-active');
+            cursorFollower.classList.add('cursor-follower-active');
         });
         
         document.addEventListener('mouseup', () => {
-            cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) scale(1)`;
-            cursorFollower.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) scale(1)`;
+            cursor.classList.remove('cursor-active');
+            cursorFollower.classList.remove('cursor-follower-active');
         });
         
         // Make elements interactive with cursor
-        const interactiveElements = document.querySelectorAll('a, button, .skill-card, .project-card, .contact-detail');
+        const interactiveElements = document.querySelectorAll('a, button, .skill-card, .project-card, .contact-detail, .social-link');
         
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
-                cursor.style.transform += ' scale(1.5)';
-                cursorFollower.style.transform += ' scale(1.8)';
+                cursor.classList.add('cursor-active');
+                cursorFollower.classList.add('cursor-follower-active');
             });
             
             el.addEventListener('mouseleave', () => {
-                cursor.style.transform = cursor.style.transform.replace(' scale(1.5)', '');
-                cursorFollower.style.transform = cursorFollower.style.transform.replace(' scale(1.8)', '');
+                cursor.classList.remove('cursor-active');
+                cursorFollower.classList.remove('cursor-follower-active');
             });
         });
     </script>
