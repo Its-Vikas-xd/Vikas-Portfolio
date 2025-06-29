@@ -1357,8 +1357,7 @@
 </head>
 <body>
     <!-- Custom cursor elements -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    
     
     <!-- Droplet Background -->
     <div class="droplets" id="droplets"></div>
@@ -1992,39 +1991,7 @@
             skillBarObserver.observe(bar);
         });
         
-        // Custom cursor effect
-        const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-            cursorFollower.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-        });
-        
-        document.addEventListener('mousedown', () => {
-            cursor.classList.add('cursor-active');
-            cursorFollower.classList.add('cursor-follower-active');
-        });
-        
-        document.addEventListener('mouseup', () => {
-            cursor.classList.remove('cursor-active');
-            cursorFollower.classList.remove('cursor-follower-active');
-        });
-        
-        // Make elements interactive with cursor
-        const interactiveElements = document.querySelectorAll('a, button, .skill-card, .project-card, .contact-detail, .social-link');
-        
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('cursor-active');
-                cursorFollower.classList.add('cursor-follower-active');
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('cursor-active');
-                cursorFollower.classList.remove('cursor-follower-active');
-            });
-        });
+
     </script>
 </body>
 </html>
