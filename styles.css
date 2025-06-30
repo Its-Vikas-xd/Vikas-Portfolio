@@ -1,24 +1,49 @@
 :root {
-            --primary: #4361ee;
-            --primary-dark: #3a0ca3;
-            --secondary: #4cc9f0;
-            --accent: #7209b7;
-            --dark: #10002b;
-            --darker: #0a0020;
-            --light: #f8f9fa;
-            --gray: #adb5bd;
-            --success: #06d6a0;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.15);
-            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.2);
-            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.25);
-            --border-radius: 12px;
-            --gradient: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            --gradient-reverse: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            --gradient-accent: linear-gradient(135deg, var(--accent), var(--secondary));
-            --glass-bg: rgba(25, 25, 25, 0.3);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
+    /* Vibrant Primary Colors (Enhanced Contrast) */
+    --primary: #8a5af9;           /* Brighter Electric Purple */
+    --primary-dark: #6a1bff;      /* Deeper Royal Purple */
+    --secondary: #00ffea;         /* Vibrant Cyan */
+    --accent: #ff4dda;            /* Electric Fuchsia */
+    
+    /* Background & Neutrals (Improved Depth) */
+    --dark: #0d0c14;             /* Richer Space Black */
+    --darker: #05040a;            /* Cosmic Void */
+    --light: #ffffff;             /* Pure White */
+    --gray: #b0b1c5;             /* Softer Cosmic Dust */
+    
+    /* Status Colors (Higher Vibrancy) */
+    --success: #00ff9d;           /* Glowing Emerald */
+    --warning: #ffd400;           /* Sunbeam Yellow */
+    --danger: #ff2e6c;            /* Neon Raspberry */
+    --info: #00f0ff;             /* Electric Sky Blue */
+    
+    /* Gradients (More Dynamic) */
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --gradient-reverse: linear-gradient(135deg, var(--secondary), var(--primary));
+    --gradient-accent: linear-gradient(135deg, var(--accent), var(--secondary));
+    --gradient-neon: linear-gradient(135deg, 
+        #ff4dda 0%, 
+        #8a5af9 40%, 
+        #00ffea 100%);
+    
+    /* Glass Effect (Enhanced Modern) */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-blur: blur(12px);
+    
+    /* Animation */
+    --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    
+    /* Shadows (More Vibrant) */
+    --shadow-sm: 0 4px 12px rgba(0, 255, 234, 0.2);
+    --shadow-md: 0 12px 24px rgba(138, 90, 249, 0.35);
+    --shadow-lg: 0 24px 48px rgba(255, 77, 218, 0.4);
+    --glow: 0 0 20px rgba(138, 90, 249, 0.7);
+    
+    /* Borders */
+    --border-radius: 20px;
+}
+
 
         * {
             margin: 0;
@@ -28,8 +53,9 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            color: var(--light);
-            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            background: linear-gradient(135deg, #0d0c14, #05040a);
+            color: #fefefe;
+            min-height: 100vh;
             line-height: 1.7;
             overflow-x: hidden;
             position: relative;
@@ -556,87 +582,182 @@
         }
 
         /* Skills Section */
-        .skills {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
             position: relative;
-            overflow: hidden;
         }
 
-        .skills::before {
+        .section-title {
+            font-size: 3.2rem;
+            background: linear-gradient(90deg, #8a5af9, #00ffea);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, rgba(10, 0, 32, 0) 70%);
-            animation: rotate 20s linear infinite;
-            z-index: 0;
-        }
-
-        .skills-container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .skill-category {
-            background: rgba(25, 25, 25, 0.2);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid rgba(67, 97, 238, 0.2);
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .skill-category h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--gradient);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #8a5af9, #00ffea);
             border-radius: 10px;
         }
 
-        .skill-category ul {
-            list-style: none;
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #b0b1c5;
+            max-width: 700px;
+            margin: 20px auto 0;
+            line-height: 1.6;
         }
 
-        .skill-category li {
-            padding: 10px 0;
+        /* Horizontal Skills Section */
+        .skills-horizontal {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(138, 90, 249, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(138, 90, 249, 0.25);
+            border-color: rgba(138, 90, 249, 0.4);
+        }
+
+        .category-header {
             display: flex;
             align-items: center;
-            color: #e2e8f0;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         }
 
-        .skill-category li::before {
-            content: '✓';
-            color: var(--success);
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 1.2rem;
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #8a5af9, #6a1bff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            font-size: 2rem;
+            box-shadow: 0 0 20px rgba(138, 90, 249, 0.5);
         }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, #8a5af9, #00ffea);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .skill-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 150px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-8px);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 20px rgba(138, 90, 249, 0.3);
+            border-color: rgba(138, 90, 249, 0.3);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover .skill-icon {
+            transform: scale(1.2);
+        }
+
+        .skill-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .skill-level {
+            font-size: 0.9rem;
+            color: #00ffea;
+            font-weight: 500;
+            background: rgba(0, 255, 234, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+
+        /* Color coding for icons */
+        .icon-python { color: #3776ab; }
+        .icon-sql { color: #f29111; }
+        .icon-js { color: #f0db4f; }
+        .icon-html { color: #e44d26; }
+        .icon-css { color: #264de4; }
+        .icon-pandas { color: #150458; }
+        .icon-numpy { color: #4d77cf; }
+        .icon-matplotlib { color: #11557c; }
+        .icon-seaborn { color: #6a9fb5; }
+        .icon-powerbi { color: #f2c811; }
+        .icon-excel { color: #217346; }
+        .icon-plotly { color: #3f4f75; }
+        .icon-bokeh { color: #ff7700; }
+        .icon-flask { color: #000000; }
+        .icon-streamlit { color: #ff4b4b; }
+        .icon-jinja { color: #b41717; }
+        .icon-sqlite { color: #003b57; }
+        .icon-mysql { color: #00758f; }
+        .icon-git { color: #f14e32; }
+        .icon-github { color: #6e5494; }
+        .icon-jupyter { color: #f37626; }
+        .icon-vscode { color: #0078d7; }
+        .icon-pycharm { color: #21d789; }
+        .icon-office { color: #d83b01; }
+        .icon-google { color: #4285f4; }
+
+      
+
 
         /* Projects Section */
         .projects-grid {
