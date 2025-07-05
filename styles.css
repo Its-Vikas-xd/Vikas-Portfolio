@@ -733,6 +733,7 @@
         .icon-python { color: #3776ab; }
         .icon-sql { color: #f29111; }
         .icon-js { color: #f0db4f; }
+        .icon-embeddedc { color: #005f73; }
         .icon-html { color: #e44d26; }
         .icon-css { color: #264de4; }
         .icon-pandas { color: #150458; }
@@ -755,6 +756,8 @@
         .icon-pycharm { color: #21d789; }
         .icon-office { color: #d83b01; }
         .icon-google { color: #4285f4; }
+        .icon-libreoffice { color: #18a303; }
+
 
       
 
