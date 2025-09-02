@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Sharma | Python Developer & Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" type="image/x-icon" href="/Project_Images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    
+
+</head>
+<body>
+    <!-- Snowfall Effect -->
+    <div class="snowfall" id="snowfall"></div>
+    
+    <!-- Background Icons -->
+    <div class="bg-icons" id="bgIcons"></div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Vikas</a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">Hi, I'm <span id="typewriter"></span></h1>
+            <h2 class="hero-subtitle"> Python Developer | Data Scientist | Data Analysis</h2>
+            <p class="hero-description">
+                I transform complex data into actionable insights, build predictive machine learning models, 
+                and develop robust data-driven web applications. Based in the beautiful mountains of Himachal Pradesh, 
+                I combine technical expertise with creative problem-solving.
+            </p>
+            <div class="hero-btns">
+                <a href="Resume.pdf" class="btn"><i class="fas fa-download"></i> Download Resume</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-img">
+                <div class="hero-img-bg"></div>
+                <img src="Icons/pfp.jpg" alt="Vikas" class="hero-img-content">
+                <div class="profile-placeholder" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3 class="about-title">Python Developer & Data Science Enthusiast</h3>
+                <p class="about-description">
+                    I'm a passionate Python developer with expertise in data analysis, visualization, and machine learning. 
+                    With a strong foundation in Python and its powerful libraries, I create solutions that turn raw data 
+                    into meaningful insights and predictive models.
+                </p>
+                <p class="about-description">
+                    My journey in programming started during my college years and has evolved into a deep expertise 
+                    in Python development, machine learning, and data-driven applications. I enjoy solving complex 
+                    problems and building applications that make a real-world impact.
+                </p>
+                <div class="about-highlight">
+                    <p>
+                        I specialize in creating machine learning models, data-driven applications using Python, Flask, and Streamlit, 
+                        and transforming raw datasets into compelling visual stories with Power BI, Matplotlib, and Seaborn.
+                    </p>
+                </div>
+                <p class="about-description">
+                    When I'm not coding, you'll find me exploring the beautiful mountains of Himachal Pradesh, 
+                    reading tech blogs, or contributing to open-source projects.
+                </p>
+
+                <!-- Skill bars -->
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Data Analysis</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Machine Learning</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Data Visualization</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Web Development</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-skills">
+                <!-- Custom Skill Icons -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4 class="skill-name">Python</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4 class="skill-name">Machine Learning</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4 class="skill-name">Data Science</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="skill-name">Data Analysis</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h4 class="skill-name">Data Visualization</h4>
+                </div>      
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h4 class="skill-name">Power BI</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+     <div class="background-effects">
+        <div class="effect effect-1"></div>
+        <div class="effect effect-2"></div>
+        <div class="effect effect-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">My expertise in various technologies and tools, presented with visual logos for each skill</p>
+        </div>
+        
+        <div class="skills-horizontal">
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="category-title">Programming Languages</h3>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fab fa-python skill-icon icon-python"></i>
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                <div class="skill-item">
+                    <i class="fas fa-microchip skill-icon icon-embeddedc"></i>
+                    <span class="skill-name">Embedded C</span>
+                    <span class="skill-level">Advanced</span>
+                </div>
+
+                
+                    <div class="skill-item">
+                        <i class="fas fa-database skill-icon icon-sql"></i>
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js skill-icon icon-js"></i>
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-html5 skill-icon icon-html"></i>
+                        <i class="fab fa-css3-alt skill-icon icon-css"></i>
+                        <span class="skill-name">HTML/CSS</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Analysis & Visualization -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="category-title">Data Analysis & Visualization</h3>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fas fa-table skill-icon icon-pandas"></i>
+                        <span class="skill-name">Pandas</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-calculator skill-icon icon-numpy"></i>
+                        <span class="skill-name">Numpy</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-area skill-icon icon-matplotlib"></i>
+                        <span class="skill-name">Matplotlib</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-bar skill-icon icon-seaborn"></i>
+                        <span class="skill-name">Seaborn</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-pie skill-icon icon-powerbi"></i>
+                        <span class="skill-name">Power BI</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-file-excel skill-icon icon-excel"></i>
+                        <span class="skill-name">Excel</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-line skill-icon icon-plotly"></i>
+                        <span class="skill-name">Plotly</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-line skill-icon icon-bokeh"></i>
+                        <span class="skill-name">Bokeh</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="category-title">Web Development</h3>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fas fa-flask skill-icon icon-flask"></i>
+                        <span class="skill-name">Flask</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python skill-icon icon-python"></i>
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-stream skill-icon icon-streamlit"></i>
+                        <span class="skill-name">Streamlit</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fab fa-html5 skill-icon icon-html"></i>
+                        <span class="skill-name">HTML</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt skill-icon icon-css"></i>
+                        <span class="skill-name">CSS</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js skill-icon icon-js"></i>
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                     <div class="skill-item">
+                        <i class="fas fa-database skill-icon icon-sql"></i>
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fas fa-code skill-icon icon-jinja"></i>
+                        <span class="skill-name">Jinja</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Database & Tools -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="category-title">Database & Tools</h3>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fas fa-database skill-icon icon-sqlite"></i>
+                        <span class="skill-name">SQLite</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database skill-icon icon-mysql"></i>
+                        <span class="skill-name">MySQL</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt skill-icon icon-git"></i>
+                        <span class="skill-name">Git</span>
+                         <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-github skill-icon icon-github"></i>
+                        <span class="skill-name">GitHub</span>
+                         <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-book skill-icon icon-jupyter"></i>
+                        <span class="skill-name">Jupyter</span>
+                         <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code skill-icon icon-vscode"></i>
+                        <span class="skill-name">VS Code</span>
+                         <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-jet-fighter skill-icon icon-pycharm"></i>
+                        <span class="skill-name">PyCharm</span>
+                         <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-file-word skill-icon icon-office"></i>
+                        <span class="skill-name">Office Suite</span>
+                         <span class="skill-level">Advanced</span>
+                    </div>
+                <div class="skill-item">
+                        <i class="fas fa-file-alt skill-icon icon-libreoffice"></i>
+                        <span class="skill-name">LibreOffice</span>
+                        <span class="skill-level">Advanced</span>
+                </div>
+
+                    <div class="skill-item">
+                        <i class="fab fa-google skill-icon icon-google"></i>
+                        <span class="skill-name">Google Workspace</span>
+                         <span class="skill-level">Advanced</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Explore my recent work and data science projects</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1a1a1a, #0d0d0d); display:flex; align-items:center; justify-content:center; color:var(--primary);">
+                            <img src="Project_Images/Spotify.png" alt="Shotify">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Spotify Analytics Dashboard</h3>
+                        <p class="project-description">
+                            An interactive Power BI dashboard analyzing Spotify listening behavior. Data was extracted using Python and MySQL, cleaned with Pandas and NumPy, and visualized using Power BI with Matplotlib and Seaborn for EDA.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Seaborn</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/Its-Vikas-xd/spotify-analytics-Dashboard" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+<div class="project-card">
+    <div class="project-img">
+        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1a1a1a, #0d0d0d); display:flex; align-items:center; justify-content:center; color:var(--primary);">
+            <img src="Project_Images/spam.jpg" alt="Spam Detector Pro">
+        </div>
+    </div>
+    <div class="project-content">
+        <h3 class="project-title">Spam Detector Pro</h3>
+        <p class="project-description">
+            A machine learning web app to classify Emails and SMS as <strong>Spam</strong> or <strong>Not Spam</strong>. 
+            Built using NLP, Scikit-learn, and Streamlit with high accuracy for safe communication.
+        </p>
+        <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">NLTK</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Streamlit</span>
+        </div>
+        <div class="project-buttons">
+            <a href="https://github.com/Its-Vikas-xd/Spam-Detector-Pro" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+            <a href="https://spam-detector-pro.streamlit.app/" target="_blank" class="btn btn-primary btn-small">Live Demo</a>
+        </div>
+    </div>
+</div>
+
+               <!-- Project 3 -->
+<div class="project-card">
+    <div class="project-img">
+        <div style="width:100%; height:100%; background: linear-gradient(135deg, #1a1a1a, #0d0d0d); display:flex; align-items:center; justify-content:center; color:var(--primary);">
+            <img src="Project_Images/house.jpg" alt="House Price Predictor">
+        </div>
+    </div>
+    <div class="project-content">
+        <h3 class="project-title">House Price Predictor</h3>
+        <p class="project-description">
+            A supervised machine learning web app that predicts house prices based on key features 
+            like location, area, and amenities. Built with Scikit-learn, Pandas, and Streamlit for real-time predictions.
+        </p>
+        <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Streamlit</span>
+        </div>
+        <div class="project-buttons">
+            <a href="https://github.com/Its-Vikas-xd/Home-Price-Predictor-App" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+            <a href="https://home-price-predictor-app.streamlit.app/" target="_blank" class="btn btn-primary btn-small">Live Demo</a>
+        </div>
+    </div>
+</div>
+ 
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly hello</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 class="contact-title">Contact Information</h3>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Himachal Pradesh, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>itsvikasharma007@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 XXXXXXXX15</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="Resume.pdf" class="btn" style="width: 100%; text-align: center;">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 class="contact-title">Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Enter subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Enter your message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                    <div id="formMessage" style="margin-top: 20px; display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo-footer">Vikas<span>Dev</span></div>
+                <p class="footer-text">Python Developer & Data Analyst creating impactful solutions with data-driven insights</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/vikas-sharma-493115361/" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Its-Vikas-xd" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/ItsVikasXd" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@CodingWithMe-p1k2o" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <p class="copyright">&copy; 2025 Vikas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
